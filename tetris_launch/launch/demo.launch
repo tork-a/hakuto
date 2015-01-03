@@ -1,5 +1,8 @@
 <launch>
-  <include file="$(find tetris_gazebo)/launch/tetris_world.launch" />
+  <arg name="gui" default="true"/>
+  <include file="$(find tetris_gazebo)/launch/tetris_world.launch" >
+    <arg name="gui" value="$(arg gui)" />
+  </include>
   <node pkg="teleop_twist_keyboard" name="teleop_twist_keyboard" type="teleop_twist_keyboard.py" launch-prefix="xterm -e" >
     <remap from="cmd_vel" to="/tetris/cmd_vel" />
   </node>
