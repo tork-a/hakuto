@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <name>tetris_launch</name>
+  <version>0.0.0</version>
+  <description>The tetris_launch package</description>
+
+  <maintainer email="iiysaito@opensource-robotics.tokyo.jp">Isaac I.Y. Saito</maintainer>
+
+  <license>BSD</license>
+
+  <author email="540o@opensource-robotics.tokyo.jp">Tokyo Opensource Robotics Programmer 534o</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>tetris_gazebo</run_depend>
+
+  <export>
+  </export>
+
+</package>
