@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find urdf_tutorial)/launch/xacrodisplay.launch">
+    <arg name="model" value="$(find tetris_description)/urdf/tetris.urdf.xacro"  />
+    <arg name="gui" value="true" />
+  </include>
+</launch>

@@ -1,0 +1,4 @@
+<launch>
+  <param name="robot_description" command="$(find xacro)/xacro.py $(find tetris_description)/urdf/tetris.urdf.xacro" />
+  <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" />
+</launch>
