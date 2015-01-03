@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package>
+  <name>tetris_gazebo</name>
+  <version>0.0.0</version>
+  <description>The tetris_gazebo package</description>
+
+  <maintainer email="iiysaito@opensource-robotics.tokyo.jp">Isaac I.Y. Saito</maintainer>
+
+  <license>BSD</license>
+
+  <author email="540o@opensource-robotics.tokyo.jp">Tokyo Opensource Robotics Programmer 534o</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>tetris_description</run_depend>
+  <run_depend>rosbash</run_depend>
+  <run_depend>xacro</run_depend>
+  <run_depend>gazebo_ros</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+
+  <export>
+  </export>
+
+</package>

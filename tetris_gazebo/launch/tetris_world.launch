@@ -1,0 +1,8 @@
+<launch>
+  <arg name="gui" default="true"/>
+  <include file="$(find tetris_gazebo)/launch/incldue/gazebo.launch.xml" >
+    <arg name="model" value="$(find tetris_description)/urdf/tetris.urdf.xacro"  />
+    <arg name="world_name" default="$(find tetris_gazebo)/worlds/apollo15_landing_site.world"/>
+    <arg name="gui" value="$(arg gui)" />
+  </include>
+</launch>
