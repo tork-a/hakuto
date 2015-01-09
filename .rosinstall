@@ -1,1 +1,2 @@
+- git: {local-name: tork-a/hakuto, uri: 'https://github.com/tork-a/hakuto.git', version: master}
 - hg: {local-name: osrf/gazebo_models, uri: 'https://bitbucket.org/k-okada/gazebo_models', version: add_apollo_15_landing_site}
