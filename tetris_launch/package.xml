@@ -12,6 +12,7 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
+  <run_depend>teleop_twist_keyboard</run_depend>
   <run_depend>tetris_gazebo</run_depend>
 
   <export>
