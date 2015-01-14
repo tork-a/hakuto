@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>tetris_launch</name>
-  <version>0.0.0</version>
+  <version>0.0.1</version>
   <description>The tetris_launch package</description>
 
   <maintainer email="iiysaito@opensource-robotics.tokyo.jp">Isaac I.Y. Saito</maintainer>
