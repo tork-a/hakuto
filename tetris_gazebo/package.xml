@@ -20,6 +20,8 @@
   <run_depend>robot_state_publisher</run_depend>
 
   <export>
+    <gazebo_ros gazebo_model_path="${prefix}/../tetris_description/models:${prefix}/models" />
+    <gazebo_ros gazebo_media_path="${prefix}/models" />
   </export>
 
 </package>
