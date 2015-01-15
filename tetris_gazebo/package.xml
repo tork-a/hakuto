@@ -2,7 +2,9 @@
 <package>
   <name>tetris_gazebo</name>
   <version>0.0.1</version>
-  <description>The tetris_gazebo package</description>
+  <description>The tetris_gazebo package.
+   `models` directory is temporary and should be removed once <a href = "https://bitbucket.org/osrf/gazebo_models/pull-request/115/add-apollo15_landing_site_1000x/diff">this pullrequest to gazebo_model</a> gets merged.
+  </description>
 
   <maintainer email="iiysaito@opensource-robotics.tokyo.jp">Isaac I.Y. Saito</maintainer>
 
