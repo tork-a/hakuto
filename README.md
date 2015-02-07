@@ -77,31 +77,22 @@ $ mkdir -p ~/ros_ws/src && cd ~/ros_ws/src && catkin_init_workspace
 $ git clone https://github.com/tork-a/hakuto.git
 ```
 
-2. Also download other necessary sources.
-
- ```
-$ cd ~/ros_ws
-$ wstool init -j8 src
-$ wstool merge https://raw.githubusercontent.com/tork-a/hakuto/master/.rosinstall?token=ABwVEQx8x-9V2eVzDfCO25Rm2hp83Vohks5UuK2xwA%3D%3D -t src
-$ wstool update -t src
-```
-
-3. Install depended libraries.
+2. Install depended libraries.
 
  ```
 $ cd ~/ros_ws
 $ rosdep install --from-paths src --ignore-src --rosdistro indigo -r -y 
 ```
 
-4. Now ready to build sources.
+3. Now ready to build sources.
 
  ```
 $ catkin_make install && source install/setup.bash
 ```
 
-5. Now let's install web frontend of the simulator, `Gzweb`. Follow the [official installation steps](http://gazebosim.org/gzweb#gzweb_installation). Go through until `Clone the repository and build` section (ie. Stop before `Running gzserver, gzweb server, and WebGL client` section). Select `./deploy.sh -m`.
+4. Now let's install web frontend of the simulator, `Gzweb`. Follow the [official installation steps](http://gazebosim.org/gzweb#gzweb_installation). Go through until `Clone the repository and build` section (ie. Stop before `Running gzserver, gzweb server, and WebGL client` section). Select `./deploy.sh -m`.
 
-6. Place the necessary 3D model files of lunar surface by running the following commands.
+5. Place the necessary 3D model files of lunar surface by running the following commands.
 
  ```
 $ cd %HOME_GZWEB%/http/client/
@@ -155,6 +146,14 @@ That's it for the preparation. Now, run the keypad server.
  ```
 terminal-3$ roslaunch rosbridge_server rosbridge_websocket.launch
 ```
+
+## hakuto ROS package 
+
+Please see the manifest file of each package as follows for the description.
+
+ * [tetris_description](https://github.com/tork-a/hakuto/blob/master/tetris_description/package.xml)
+ * [tetris_gazebo](https://github.com/tork-a/hakuto/blob/master/tetris_gazebo/package.xml)
+ * [tetris_launch](https://github.com/tork-a/hakuto/blob/master/tetris_launch/package.xml)
 
 ## Troubleshoot server
 
