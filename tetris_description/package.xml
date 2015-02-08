@@ -2,7 +2,7 @@
 <package>
   <name>tetris_description</name>
   <version>0.0.1</version>
-  <description>The tetris_description package</description>
+  <description>This package holds 3D models of the hakuto robots in COLLADA and URDF formats.</description>
 
   <maintainer email="iiysaito@opensource-robotics.tokyo.jp">Isaac I.Y. Saito</maintainer>
 
