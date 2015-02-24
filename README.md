@@ -107,6 +107,18 @@ $ cd %HOME_GZWEB%/http/client/assets     (`assets` folder may not exist. If so, 
 $ ln -fs `rospack find tetris_gazebo`/models/apollo15_landing_site_1000x1000 .
 ```
 
+6. Prepare joystick keypad (for tele-operation)
+
+ Tele-operation is done by using [keyboardteleopjs](http://wiki.ros.org/keyboardteleopjs) that accepts command input from the keyboard through web browser.
+ 
+ Put a `joystick.html` file under the docroot of your web server. We use `/var/www/` for `apache` in this document.
+
+ ```
+terminal-3$ cp `rospack find tetris_launch`/www/joystick.html /var/www/
+```
+
+ You might need to edit the file using your web server's IP address, and the name of `Twist` topic. Do that by following [the tutorial for keyboard teleop](http://wiki.ros.org/keyboardteleopjs/Tutorials/CreatingABasicTeleopWidgetWithSpeedControl).
+
 ## Run the web simulator server (Gzweb, Gazebo on web server)
 
 You need to open multiple terminals and run the following.
@@ -124,29 +136,6 @@ terminal-2$ DISPLAY=:0.0 ROS_MASTER_URI=http://%WEBSERVER_IPADDR%:13311 ROS_IP=%
 (Example)
 terminal-2$ DISPLAY=:0.0 ROS_MASTER_URI=http://54.199.141.230:13311 ROS_IP=54.199.141.230 /usr/local/lib/node_modules/gzweb/start_gzweb.sh &
 ```
-
-### Run keypad
-
-To run a keypad tool, you need another terminal.
-
- * Terminal-3: Run [keyboardteleopjs](http://wiki.ros.org/keyboardteleopjs) that accepts command input from the keyboard through web browser.
-
-First put a `joystick.html` file under the docroot of your web server. We use `/var/www/` for `apache` in this document.
-
- ```
-terminal-3$ cp `rospack find tetris_launch`/www/joystick.html /var/www/
-```
-
-You might need to edit the file using your web server's IP address, and the name of `Twist` topic. Do that by following [the tutorial for keyboard teleop](http://wiki.ros.org/keyboardteleopjs/Tutorials/CreatingABasicTeleopWidgetWithSpeedControl).
-
-You might have to install `rosbridge_server` package by `$ apt-get install ros-indigo-rosbridge-server`.
-
-That's it for the preparation. Now, run the keypad server.
-
- ```
-terminal-3$ roslaunch rosbridge_server rosbridge_websocket.launch
-```
-
 ## hakuto ROS package 
 
 Please see the manifest file of each package as follows for the description.
