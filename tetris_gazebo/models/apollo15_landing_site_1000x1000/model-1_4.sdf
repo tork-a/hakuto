@@ -17,28 +17,10 @@
         <geometry>
           <heightmap>
             <texture>
-              <diffuse>file://media/materials/textures/dirt_diffusespecular.png</diffuse>
-              <normal>file://media/materials/textures/flat_normal.png</normal>
-              <size>5</size>
-            </texture>
-            <texture>
-              <diffuse>file://media/materials/textures/grass_diffusespecular.png</diffuse>
-              <normal>file://media/materials/textures/flat_normal.png</normal>
-              <size>5</size>
-            </texture>
-            <texture>
               <diffuse>file://apollo15_landing_site_1000x1000/materials/textures/AS17-134-20508HR_1024x1024_1.jpg</diffuse>
               <normal>file://media/materials/textures/flat_normal.png</normal>
               <size>20</size>
             </texture>
-            <blend>
-              <min_height>-150</min_height>
-              <fade_dist>5</fade_dist>
-            </blend>
-            <blend>
-              <min_height>-100</min_height>
-              <fade_dist>10</fade_dist>
-            </blend>
             <uri>model://apollo15_landing_site_1000x1000/materials/textures/NAC_DTM_APOLLO15_E261N0036_2000x2000+611+5682.png</uri>
             <size>1000 1000 80</size>
             <pos>0 0 -77</pos>
