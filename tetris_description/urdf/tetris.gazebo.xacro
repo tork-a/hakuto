@@ -9,7 +9,7 @@
   </gazebo>
 
   <gazebo>
-    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive_fixed.so">
       <alwaysOn>true</alwaysOn>
       <updateRate>100</updateRate>
       <leftJoint>right_wheel_joint</leftJoint> <!-- intentionally reverted -->
