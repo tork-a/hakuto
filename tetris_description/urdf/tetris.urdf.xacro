@@ -121,19 +121,18 @@
 
   <transmission name="right_wheel_trans">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="right_wheel_joint"/>
-    <actuator name="right_wheel_motor">
+    <joint name="right_wheel_joint">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
+    </joint>
+    <actuator name="right_wheel_motor">
     </actuator>
   </transmission>
   <transmission name="right_wheel_trans">
     <type>transmission_interface/SimpleTransmission</type>
-    <type>pr2_mechanism_model/SimpleTransmission</type>    
-    <joint name="left_wheel_joint"/>
-    <actuator name="left_wheel_motor">
+    <joint name="left_wheel_joint">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
-      <mechanicalReduction>1</mechanicalReduction>
+    </joint>
+    <actuator name="left_wheel_motor">
     </actuator>
   </transmission>
 
