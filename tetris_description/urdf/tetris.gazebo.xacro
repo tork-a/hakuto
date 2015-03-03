@@ -16,7 +16,7 @@
       <rightJoint>left_wheel_joint</rightJoint>
       <wheelSeparation>${wheel_separation}</wheelSeparation>
       <wheelDiameter>${wheel_diameter}</wheelDiameter>
-      <torque>20</torque>
+      <torque>5</torque>
       <commandTopic>/${ns}/cmd_vel</commandTopic>
       <odometryTopic>/${ns}/odom</odometryTopic>
       <odometryFrame>odom</odometryFrame>
