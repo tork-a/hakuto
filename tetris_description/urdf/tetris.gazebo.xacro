@@ -9,14 +9,14 @@
   </gazebo>
 
   <gazebo>
-    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive_fixed.so">
       <alwaysOn>true</alwaysOn>
       <updateRate>100</updateRate>
       <leftJoint>right_wheel_joint</leftJoint> <!-- intentionally reverted -->
       <rightJoint>left_wheel_joint</rightJoint>
       <wheelSeparation>${wheel_separation}</wheelSeparation>
       <wheelDiameter>${wheel_diameter}</wheelDiameter>
-      <torque>20</torque>
+      <torque>5</torque>
       <commandTopic>/${ns}/cmd_vel</commandTopic>
       <odometryTopic>/${ns}/odom</odometryTopic>
       <odometryFrame>odom</odometryFrame>
