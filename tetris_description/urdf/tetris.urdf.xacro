@@ -2,9 +2,12 @@
 <robot name="tetris" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <xacro:property name="PI" value="3.1415926535897931"/>
+  <xacro:property name="body_mass" value="1.89"/>
   <xacro:property name="wheel_width" value="0.04"/>
   <xacro:property name="wheel_diameter" value="0.2"/>
   <xacro:property name="wheel_separation" value="0.25"/>
+  <xacro:property name="wheel_mass" value="0.425"/>
+  <xacro:property name="tail_mass" value="0.162"/>
   <xacro:property name="ns" value="tetris" />
 
   <!-- Import all Gazebo-customization elements, including Gazebo colors -->
@@ -38,8 +41,9 @@
       </geometry>
     </collision>
     <inertial>
-      <mass value="10.0" />
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+      <origin xyz="-0.03 0 -0.04" />
+      <mass value="${body_mass}" />
+      <inertia ixx="${(1.0/12)*body_mass*(0.2*0.2+0.1*0.1)}" ixy="0.0" ixz="0.0" iyy="${(1.0/12)*body_mass*(0.2*0.2+0.1*0.1)}" iyz="0.0" izz="${(1.0/12)*body_mass*(0.2*0.2+0.2*0.2)}" />
     </inertial>
   </link>
   <link name="tail_link">
@@ -50,8 +54,7 @@
       </geometry>
     </collision>
     <inertial>
-      <origin xyz="-0.45 0 0" />
-      <mass value="5" />
+      <mass value="${tail_mass}" />
       <inertia ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.0" izz="1" />
     </inertial>
   </link>
@@ -77,8 +80,8 @@
       </geometry>
     </collision>
     <inertial>
-      <mass value="0.01" />
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
+      <mass value="${wheel_mass}" />
+      <inertia ixx="${(1.0/12)*wheel_mass*(3*wheel_diameter/2*wheel_diameter/2+wheel_width*wheel_width)}" ixy="0.0" ixz="0.0" iyy="${(1.0/12)*wheel_mass*(3*wheel_diameter/2*wheel_diameter/2+wheel_width*wheel_width)}" iyz="0.0" izz="${(1.0/12)*wheel_mass*(wheel_diameter/2*wheel_diameter/2)}" />
     </inertial>
   </link>
   <link name="left_wheel">
@@ -95,8 +98,8 @@
       </geometry>
     </collision>
     <inertial>
-      <mass value="0.01" />
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
+      <mass value="${wheel_mass}" />
+      <inertia ixx="${(1.0/12)*wheel_mass*(3*wheel_diameter/2*wheel_diameter/2+wheel_width*wheel_width)}" ixy="0.0" ixz="0.0" iyy="${(1.0/12)*wheel_mass*(3*wheel_diameter/2*wheel_diameter/2+wheel_width*wheel_width)}" iyz="0.0" izz="${(1.0/12)*wheel_mass*(wheel_diameter/2*wheel_diameter/2)}" />
     </inertial>
   </link>
 
