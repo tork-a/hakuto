@@ -34,7 +34,7 @@ Under following circumstance the simulator limitedly works:
 
 ### Simulator view
 
-Users can access the simulator thru the following link: http://54.199.141.230:8080/#
+Users can access the simulator thru the following link: 54.92.58.250:8080/#
 You'll see simulator similar to the following image:
 
 ![hakuto web simulator](/tetris_launch/doc/gzweb-1.2_tetris_osx_ff.png.jpg)
@@ -134,7 +134,7 @@ terminal-1$ roslaunch tetris_launch demo.launch gui:=false
 terminal-2$ DISPLAY=:0.0 ROS_MASTER_URI=http://%WEBSERVER_IPADDR%:13311 ROS_IP=%WEBSERVER_IPADDR% %HOME_GZWEB%/start_gzweb.sh &
 
 (Example)
-terminal-2$ DISPLAY=:0.0 ROS_MASTER_URI=http://54.199.141.230:13311 ROS_IP=54.199.141.230 /usr/local/lib/node_modules/gzweb/start_gzweb.sh &
+terminal-2$ DISPLAY=:0.0 ROS_MASTER_URI=http://54.92.58.250:13311 ROS_IP=54.92.58.250 /usr/local/lib/node_modules/gzweb/start_gzweb.sh &
 ```
 ## hakuto ROS package 
 
