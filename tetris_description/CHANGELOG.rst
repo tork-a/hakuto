@@ -2,8 +2,8 @@
 Changelog for package tetris_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.0 (2015-03-22)
+------------------
 * Add kinematic parameters obtained from designers.
 * Add gazebo_ros_diff_drive until https://github.com/ros-simulation/gazebo_ros_pkgs/pull/298 is merged
 * [tetris_description] update model parameters, not sure if this is correct

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>tetris_launch</name>
-  <version>0.0.1</version>
+  <version>0.1.0</version>
   <description>Launch files (batch files that start processes and set parameters) for hakuto robots.</description>
 
   <maintainer email="iiysaito@opensource-robotics.tokyo.jp">Isaac I.Y. Saito</maintainer>

@@ -2,8 +2,8 @@
 Changelog for package tetris_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.0 (2015-03-22)
+------------------
 * Add gazebo_ros_diff_drive until https://github.com/ros-simulation/gazebo_ros_pkgs/pull/298 is merged
 * [model.sdf] set surface parameters, not sure if this is correct
 * [apollo15_landing_site_1000x1000] add new model, near dune crater

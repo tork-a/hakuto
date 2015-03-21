@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>hakuto</name>
-  <version>0.0.1</version>
+  <version>0.1.0</version>
   <description>ROS package suite for the lunar rovers at Hakuto project, a Google XPRIZE competitor.</description>
 
   <maintainer email="dev@opensource-robotics.tokyo.jp">TORK</maintainer>

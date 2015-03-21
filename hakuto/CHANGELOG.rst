@@ -2,8 +2,8 @@
 Changelog for package hakuto
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.0 (2015-03-22)
+------------------
 * Initial release into ROS buildfarm.
 * Run keyboardteleop by default.
 * Add joystick.html example for keyboardteleop

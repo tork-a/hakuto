@@ -2,8 +2,8 @@
 Changelog for package tetris_launch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.0 (2015-03-22)
+------------------
 * Run keyboardteleop by default.
 * Add joystick.html example for keyboardteleop
 * Contributors: Isaac IY Saito
