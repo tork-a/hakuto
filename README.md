@@ -1,18 +1,18 @@
 hakuto [![Build Status](https://magnum.travis-ci.com/tork-a/hakuto.svg?token=CnBWT8crLoonzXSDK29D&branch=master)](https://magnum.travis-ci.com/tork-a/hakuto)
 ======
 
-ROS package suite for the lunar rovers at Hakuto project, a Google XPRIZE competitor.
+ROS package suite for the lunar rovers at [Hakuto project](http://lunar.xprize.org/teams/hakuto), a [Google Lunar XPRIZE competitor](http://lunar.xprize.org/).
 
 .. contents:: Table of Contents
    :depth: 2
 
 # Overview
 
-With this ROS package, we can realize Hakuto's Tetris robots in a simulated lunar surface on web browser. Document here is the end user's usage and server-side operation for maintanance tasks.
+With this ROS package, we can realize [lunar rovers at Hakuto](http://team-hakuto.jp/team/rover), in particular `Tetris`, in a simulated lunar surface on web browser. Document here is the end user's usage and server-side operation for maintanance tasks.
 
 # For Simulator User
 
-## OS and Web Browser tested
+## Operating System and Web Browser tested
 
 The simulator has been seen working on the following environment:
 
@@ -64,7 +64,22 @@ NOTE that the images in the web page are NOT buttons; they are there to indicate
 
 ### Install via apt (RECOMMENDED)
 
-(TBA)
+Let's install a few of the simulator's main components: [ROS](http://ros.org/) (robotics middleware), [Gazebo](http://gazebosim.org/) (dynamics simulation engine), [gzweb](http://gazebosim.org/gzweb) (Gazebo's web frontend).
+
+1.1. Install ROS.
+
+See [ROS wiki](http://wiki.ros.org/indigo/Installation/Ubuntu) for the detail to install `ROS Indigo` on Ubuntu linux 14.04 `Trusty`.
+
+```
+Ubuntu$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu trusty main" > /etc/apt/sources.list.d/ros-latest.list'
+Ubuntu$ wget https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -O - | sudo apt-key add -
+Ubuntu$ sudo apt-get update && sudo apt-get install ros-indigo-desktop-full ros-indigo-hakuto
+Ubuntu$ sudo rosdep init && rosdep update
+
+Ubuntu$ echo "### For ROS setting"
+Ubuntu$ echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
+Ubuntu$ source ~/.bashrc
+```
 
 ### Install via source
 
