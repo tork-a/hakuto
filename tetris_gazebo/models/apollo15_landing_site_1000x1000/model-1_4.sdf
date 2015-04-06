@@ -7,7 +7,7 @@
         <surface>
           <friction>
           <ode>
-            <mu>0.2</mu>
+            <mu>0.35</mu>
           </ode>
           </friction>
           <contact>
