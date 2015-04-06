@@ -3,11 +3,9 @@ hakuto [![Build Status](https://magnum.travis-ci.com/tork-a/hakuto.svg?token=CnB
 
 With this ROS package, we can realize [lunar rovers at Hakuto](http://team-hakuto.jp/team/rover), in particular `Tetris`, in a simulated lunar surface on web browser. Document here is the end user's usage and server-side operation for maintanance tasks.
 
-If you're system administrator responsible for install, maintainance work, please see [./tetris_launch/doc/sysadmin.rst](https://github.com/tork-a/hakuto/tree/master/tetris_launch/doc/sysadmin.rst) doc.
+If you're system administrator responsible for install/maintainance work please see [./tetris_launch/doc/sysadmin.rst](https://github.com/tork-a/hakuto/tree/master/tetris_launch/doc/sysadmin.rst) doc.
 
-# Simulator Usage
-
-## Operating System and Web Browser tested
+# Operating System and Web Browser tested
 
 The simulator has been seen working on the following environment:
 
@@ -25,18 +23,18 @@ Under following circumstance the simulator limitedly works:
  * MS Windows 7 (64bit)
   * IE11
 
-## How to Use Simulator
+# Simulator Basic Usage
 
-### Simulator view
+## Simulator view
 
 Users can access the simulator thru the following link: 54.92.58.250:8080/#
 You'll see simulator similar to the following image:
 
-![hakuto web simulator](/tetris_launch/doc/gzweb-1.2_tetris_osx_ff.png.jpg)
+![hakuto web simulator](/tetris_launch/doc/img/gzweb-1.2_tetris_osx_ff.png.jpg)
 
 Assigned keys vary per each OS and web browser. Typically you use `mouse buttons and wheel`, `Shift` key to control `Zoom`, `Tilt` and `Elevation`.
 
-### Keypad for simulator
+## Keypad for simulator
 
 Then, users can send commands from another web page: http://54.199.141.230/joystick.html
 You'll see keys like below:
@@ -46,29 +44,23 @@ You'll see keys like below:
 There you can use ***keyboard*** to send commands that are associated with each key. 
 NOTE that the images in the web page are NOT buttons; they are there to indicate which keys are associated with what commands.
 
-## (Option) Run on Gazebo, desktop simulator
+# Simulator Advanced Usage
 
-### Set up Gazebo (do this only once)
+## Modify environment 
 
-[Desktop simulator version of Gazebo](http://gazebosim.org/) should be already installed by the previous steps (`rosdep`, in particular). We still need some customization.
+ tetris_launch/doc/img/hakuto_gzweb_panel_sun.png 
 
-1. Link model files directory.
+## Reset views
 
- ```
-$ cd /usr/share/gazebo-%VERSION_NUMBER%
-$ cd /usr/share/gazebo-2.2               (Example)
+Sometimes you want to "reset" the robot's pose, environment, and the view (where you're looking from at the simulation) to the initial status. 
 
-$ sudo ln -fs %YOUR_CATKIN_WORKSPACE%/src/osrf/gazebo_models models
-$ sudo ln -fs ~/catkinws/src/osrf/gazebo_models models               (Example following the directory used in above instruction)
-```
+![Use the tab on the left side of the simulator](/tetris_launch/doc/img/hakuto_gzweb_initdisplay.png)
 
-### Run simulation on Gazebo
+## Restart simulation
 
- ```
-$ roslaunch tetris_launch demo.launch gui:=false
-```
+At the time of writing (Mar 2015) there's no end-user feature to restart the simulation. Please either `reset` views, or contact the simulation system admins.
+See the troubleshooting.
 
-![Screenshot](https://cloud.githubusercontent.com/assets/1840401/5726189/57f0fb2c-9b0e-11e4-8ef4-c32f945d893c.png)
+# Troubleshooting
 
- * NOTE-1: 1st time run on a computer, internet access is required to download model files for Gazebo.
- * NOTE-2: `GAZEBO_MODEL_PATH` takes absolute path.
+The Hakuto web simulation is administered by [TORK](http://opensource-robotics.tokyo.jp/), but this is subject to change. For now (Mar, 2015) any issues and requests can be contacted on [the issue tracker on github](https://github.com/tork-a/hakuto/issues).
