@@ -109,7 +109,20 @@ The directory `~/catkin_ws/` will be used as a source directory for this instruc
   $ cd %HOME_GZWEB%/http/client/assets     (`assets` folder may not exist. If so, create it)
   $ ln -fs `rospack find tetris_gazebo`/models/apollo15_landing_site_1000x1000 .
 
-6. Prepare joystick keypad (for tele-operation)
+6. Add a trick to show the earth in the sky.
+
+By default, the moon appears in the sky (I know how strange you feel since we're simulating lunar surface). 
+
+  ::
+
+  $ cd /usr/share/gazebo-2.2/media/skyx/
+  $ sudo cp `rospack find tetris_gazebo`/worlds/earth_from_moon_20071113_kaguya_03l.png .
+  $ sudo cp SkyX_Moon.png SkyX_Moon.png.org
+  $ sudo ln -sf earth_from_moon_20071113_kaguya_03l.png SkyX_Moon.png
+
+NOTE: Directory `/usr/share/gazebo-2.2/media/skyx/` may vary depending on the version of Gazebo, or also for Gzweb (at the time of writing this is not tested on `Gzweb` yet). In that case find `media/skyx` directory and apply the same change.
+
+7. Prepare joystick keypad (for tele-operation)
 
  Tele-operation is done by using `keyboardteleopjs <http://wiki.ros.org/keyboardteleopjs>`_ that accepts command input from the keyboard through web browser. Put a `joystick.html` file under the `docroot` of your web server. In this document we use `/var/www/` for `apache` in this document. ::
   
