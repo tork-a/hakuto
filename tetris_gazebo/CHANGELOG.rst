@@ -2,6 +2,11 @@
 Changelog for package tetris_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* (Feature) Add starry sky scene, earth seen from lunar surface taken by Kaguya, JAXA
+* Contributors: Isaac IY Saito
+
 0.1.1 (2015-04-09)
 ------------------
 * More friction for better uphill climbing.

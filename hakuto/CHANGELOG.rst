@@ -2,6 +2,11 @@
 Changelog for package hakuto
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* (Feature) Add starry sky scene, earth seen from lunar surface taken by Kaguya, JAXA
+* Contributors: Isaac IY Saito
+
 0.1.1 (2015-04-09)
 ------------------
 * (Feature) More friction for better uphill climbing.
