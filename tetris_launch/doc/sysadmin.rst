@@ -113,7 +113,7 @@ The directory `~/catkin_ws/` will be used as a source directory for this instruc
 
 By default, the moon appears in the sky (I know how strange you feel since we're simulating lunar surface). 
 
-  ::
+::
 
   $ cd /usr/share/gazebo-2.2/media/skyx/
   $ sudo cp `rospack find tetris_gazebo`/worlds/earth_from_moon_20071113_kaguya_03l.png .
@@ -121,6 +121,18 @@ By default, the moon appears in the sky (I know how strange you feel since we're
   $ sudo ln -sf earth_from_moon_20071113_kaguya_03l.png SkyX_Moon.png
 
 NOTE: Directory `/usr/share/gazebo-2.2/media/skyx/` may vary depending on the version of Gazebo, or also for Gzweb (at the time of writing this is not tested on `Gzweb` yet). In that case find `media/skyx` directory and apply the same change.
+
+Also modify `SkyX_Moon.fragment` file in the same directory (see `this question <http://answers.gazebosim.org/questions/8401>`_ for the discussion if necessary).
+
+::
+
+    $ diff /usr/share/gazebo-2.2/media/skyx/SkyX_Moon.fragment.org /usr/share/gazebo-2.2/media/skyx/SkyX_Moon.fragment
+    60c60
+    < 	haloIntensity = pow(haloIntensity, uMoonPhase.z);
+    ---
+    > 	haloIntensity = pow(0.0, uMoonPhase.z);
+
+  `.fragment` file seems to not work right with some comment-out formats; e.g. do not use `#` or it just didn't show the earth at all.
 
 7. Prepare joystick keypad (for tele-operation)
 
@@ -189,7 +201,7 @@ Run simulation on Gazebo
 
  $ roslaunch tetris_launch demo.launch gui:=true
 
-.. image:: https://cloud.githubusercontent.com/assets/1840401/5726189/57f0fb2c-9b0e-11e4-8ef4-c32f945d893c.png
+.. image:: ./img/tetris_tsukimi_earth_2.png
 
 * NOTE-1: 1st time run on a computer, internet access is required to download model files for Gazebo.
 * NOTE-2: `GAZEBO_MODEL_PATH` takes absolute path.
