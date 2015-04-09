@@ -2,8 +2,10 @@
 <package>
   <name>tetris_gazebo</name>
   <version>0.1.1</version>
-  <description>This package contains specific ROS simulation setting for hakuto robots.
-   `models` directory is temporary and should be removed once <a href = "https://bitbucket.org/osrf/gazebo_models/pull-request/124/add-apollo15_landing_site/diff">this pullrequest to gazebo_model</a> gets merged.
+  <description>This package contains specific ROS simulation setting for hakuto robots. Note:
+   <ul>
+    <li>"models" directory is temporary and should be removed once <a href = "https://bitbucket.org/osrf/gazebo_models/pull-request/124/add-apollo15_landing_site/diff">this pullrequest to gazebo_model</a> gets merged.</li>
+   </ul>
   </description>
 
   <maintainer email="iiysaito@opensource-robotics.tokyo.jp">Isaac I.Y. Saito</maintainer>
