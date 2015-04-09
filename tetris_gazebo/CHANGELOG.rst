@@ -2,8 +2,8 @@
 Changelog for package tetris_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.1 (2015-04-09)
+------------------
 * More friction for better uphill climbing.
 * Contributors: Isaac IY Saito
 

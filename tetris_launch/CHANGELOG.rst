@@ -2,8 +2,8 @@
 Changelog for package tetris_launch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.1 (2015-04-09)
+------------------
 * (Doc) Elaborate instruction.
 * Contributors: Isaac IY Saito
 

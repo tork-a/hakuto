@@ -2,8 +2,8 @@
 Changelog for package hakuto
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.1 (2015-04-09)
+------------------
 * (Feature) More friction for better uphill climbing.
 * (Doc) Elaborate instruction.
 * Contributors: Isaac IY Saito
