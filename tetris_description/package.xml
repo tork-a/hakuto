@@ -4,14 +4,14 @@
   <version>0.1.0</version>
   <description>This package holds 3D models of the hakuto robots in COLLADA and URDF formats.</description>
 
-  <maintainer email="iiysaito@opensource-robotics.tokyo.jp">Isaac I.Y. Saito</maintainer>
-
+  <maintainer email="dev@opensource-robotics.tokyo.jp">TORK</maintainer>
   <license>BSD</license>
-
-  <author email="540o@opensource-robotics.tokyo.jp">Tokyo Opensource Robotics Programmer 534o</author>
+  <author email="534o@opensource-robotics.tokyo.jp">Tokyo Opensource Robotics Programmer 534o</author>
+  <url type="website">http://wiki.ros.org/tetris_description</url>
+  <url type="repository">https://github.com/tork-a/hakuto</url>
+  <url type="bugtracker">https://github.com/tork-a/hakuto/issues/</url>
 
   <buildtool_depend>catkin</buildtool_depend>
-
   <run_depend>urdf_tutorial</run_depend>
 
   <export>

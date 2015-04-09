@@ -2,11 +2,11 @@
 <package>
   <name>hakuto</name>
   <version>0.1.0</version>
-  <description>ROS package suite for the lunar rovers at Hakuto project, a Google XPRIZE competitor.</description>
+  <description>ROS package suite for the lunar rovers at Hakuto project, a Google Lunar XPRIZE contender.</description>
 
   <maintainer email="dev@opensource-robotics.tokyo.jp">TORK</maintainer>
   <license>BSD</license>
-  <author email="540o@opensource-robotics.tokyo.jp">Tokyo Opensource Robotics Programmer 534o</author>
+  <author email="534o@opensource-robotics.tokyo.jp">Tokyo Opensource Robotics Programmer 534o</author>
 
   <url type="website">http://wiki.ros.org/hakuto</url>
   <url type="repository">https://github.com/tork-a/hakuto</url>
