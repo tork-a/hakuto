@@ -5,10 +5,6 @@
     <physics type="ode">
       <gravity>0 0 -1.6350</gravity> <!-- 1/6 of 9.80665 -->
     </physics>
-    <!-- A global light source -->
-    <include>
-      <uri>model://sun</uri>
-    </include>
     <!-- A hightmap plane -->
     <include>
       <uri>model://apollo15_landing_site_1000x1000</uri>
@@ -26,6 +22,24 @@
           <humidity>0</humidity>
         </clouds>
       </sky>
-   </scene>
+      <shadows>1</shadows>
+    </scene>
+    <light name='fake_sun' type='point_light'>
+      <cast_shadows>true</cast_shadows>
+      <pose>450 33 1 0 0 0</pose>
+      <diffuse>127 127 127 255</diffuse>
+      <specular>25 25 25 255</specular>
+      <attenuation>
+        <range>550</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+    </light>
+    <gui>
+     <camera name="camera_world_main">
+       <pose>57 15 1 0 0.05 1.4</pose>
+     </camera>
+    </gui>
   </world>
 </sdf>
