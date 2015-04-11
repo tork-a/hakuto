@@ -2,6 +2,12 @@
 Changelog for package hakuto
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* (Improve) Cosmetics; Robot spawned at more adventurous starting pose. Sun location to cast more realistic shadow.
+* (Doc) No fragment aura around the earth to fix `#40 <https://github.com/tork-a/hakuto/issues/40>`_
+* Contributors: Isaac IY Saito
+
 0.1.2 (2015-04-09)
 ------------------
 * (Feature) Add starry sky scene, earth seen from lunar surface taken by Kaguya, JAXA

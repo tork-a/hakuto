@@ -2,6 +2,11 @@
 Changelog for package tetris_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* (Improve) Cosmetics; Robot spawned at more adventurous starting pose. Sun location to cast more realistic shadow.
+* Contributors: Isaac IY Saito
+
 0.1.2 (2015-04-09)
 ------------------
 * (Feature) Add starry sky scene, earth seen from lunar surface taken by Kaguya, JAXA
