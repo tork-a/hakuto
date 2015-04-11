@@ -2,8 +2,8 @@
 Changelog for package hakuto
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.3 (2015-04-11)
+------------------
 * (Improve) Cosmetics; Robot spawned at more adventurous starting pose. Sun location to cast more realistic shadow.
 * (Doc) No fragment aura around the earth to fix `#40 <https://github.com/tork-a/hakuto/issues/40>`_
 * Contributors: Isaac IY Saito

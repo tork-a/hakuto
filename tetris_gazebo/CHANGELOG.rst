@@ -2,8 +2,8 @@
 Changelog for package tetris_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.3 (2015-04-11)
+------------------
 * (Improve) Cosmetics; Robot spawned at more adventurous starting pose. Sun location to cast more realistic shadow.
 * Contributors: Isaac IY Saito
 

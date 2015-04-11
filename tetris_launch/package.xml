@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>tetris_launch</name>
-  <version>0.1.2</version>
+  <version>0.1.3</version>
   <description>Launch files (batch files that start processes and set parameters) for hakuto robots. This package also contains document for the Hakuto ROS package suite. Notes:
    <ul>
     <li>Some images included in the instruction to be applied to Gazebo runtime are <a href = "http://l2db.selene.darts.isas.jaxa.jp/index.html.en">publicly provided by JAXA</a>, Japan Aerospace Exploration Agency, for science and educational purposes.</li>
