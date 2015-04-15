@@ -24,18 +24,6 @@
       </sky>
       <shadows>1</shadows>
     </scene>
-    <light name='fake_sun' type='point_light'>
-      <cast_shadows>true</cast_shadows>
-      <pose>450 33 1 0 0 0</pose>
-      <diffuse>127 127 127 255</diffuse>
-      <specular>25 25 25 255</specular>
-      <attenuation>
-        <range>550</range>
-        <constant>0.5</constant>
-        <linear>0.01</linear>
-        <quadratic>0.001</quadratic>
-      </attenuation>
-    </light>
     <gui>
      <camera name="camera_world_main">
        <pose>57 15 1 0 0.05 1.4</pose>
