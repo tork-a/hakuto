@@ -30,24 +30,20 @@
   <gazebo reference="base_link">
     <mu1>0.1</mu1>
     <mu2>0.1</mu2>
-    <material>Gazebo/Black</material>
   </gazebo>
   <gazebo reference="tail_link">
     <mu1>0.1</mu1>
     <mu2>0.1</mu2>
-    <material>Gazebo/White</material>
   </gazebo>
   <gazebo reference="right_wheel">
     <mu1>0.8</mu1>
     <mu2>0.8</mu2>
-    <material>Gazebo/Grey</material>
     <kp>100000000.0</kp>
     <kd>1.0</kd>
  </gazebo>
   <gazebo reference="left_wheel">
     <mu1>0.8</mu1>
     <mu2>0.8</mu2>
-    <material>Gazebo/Grey</material>
     <kp>100000000.0</kp>
     <kd>1.0</kd>
  </gazebo>
