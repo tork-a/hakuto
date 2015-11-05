@@ -145,7 +145,7 @@ Also modify `SkyX_Moon.fragment` file in the same directory (see `this question 
 Run the web simulator server 
 --------------------------------
 
-Run Gzweb, Gazebo on web server. You need to open multiple terminals and run the following. We encourage you to ue `tmux` tools ( if you run tmux a you can attach to existing shells, C-b D will detach from tmux)
+Run Gzweb, Gazebo on web server. You need to open multiple terminals and run the following. We encourage you to use `tmux` tools ( if you run `tmux a`, you can attach to existing shells, C-b D will detach from tmux)
 
 * Terminal-1: Run simulation engine, Hakuto simulation modules.
 * Terminal-2: Run web frontend for the simulation engine. 
@@ -153,7 +153,7 @@ Run Gzweb, Gazebo on web server. You need to open multiple terminals and run the
  ::
 
   terminal-1$ roslaunch tetris_launch demo.launch gui:=false
-  terminal-2$ DISPLAY=:0.0 ROS_MASTER_URI=http://%WEBSERVER_IPADDR%:13311 ROS_IP=%WEBSERVER_IPADDR% %HOME_GZWEBd%/start_gzweb.sh &
+  terminal-2$ DISPLAY=:0.0 ROS_MASTER_URI=http://%WEBSERVER_IPADDR%:13311 ROS_IP=%WEBSERVER_IPADDR% %HOME_GZWEB%/start_gzweb.sh &
 
   (Example)
 
