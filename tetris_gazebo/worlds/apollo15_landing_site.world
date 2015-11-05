@@ -11,8 +11,8 @@
     </include>
     <!-- Starry sky -->
     <scene>
-      <ambient>0.4 0.4 0.4 1.0</ambient>
-      <background>0.1 0.1 0.1 1</background>
+      <ambient>0.1 0.1 0.1 1.0</ambient>
+      <background>0.0 0.0 0.0 1</background>
       <grid>false</grid>
       <sky>
         <time>13</time>
@@ -24,6 +24,17 @@
       </sky>
       <shadows>1</shadows>
     </scene>
+    <light name='sun' type="directional" >
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>1.0 1.0 1.0 1</diffuse>
+      <specular>0.0 0.0 0.0 1</specular>
+      <attenuation>
+        <range>100</range>
+        <constant>1</constant>
+      </attenuation>
+      <direction>-1.0 1.0 -1.0</direction>
+    </light>
     <gui>
      <camera name="camera_world_main">
        <pose>57 15 1 0 0.05 1.4</pose>
