@@ -94,8 +94,7 @@ The directory `~/catkin_ws/` will be used as a source directory for this instruc
 
   $ catkin_make install && source install/setup.bash
 
-4. Now let's install web front-end of the simulator, `Gzweb`. Follow the `official installation steps <http://gazebosim.org/gzweb#gzweb_installation>`_. Go through until `Clone the repository and build` section (ie. Stop before `Running gzserver, gzweb server, and WebGL client` section). Select `./deploy.sh -m`.
-
+4. Now let's install web front-end of the simulator, `Gzweb`. Follow the `official installation steps <http://gazebosim.org/gzweb#gzweb_installation>`_. Go through until `Clone the repository and build` section (ie. Stop before `Running gzserver, gzweb server, and WebGL client` section). Select `./deploy.sh -m local -c`. and this may failed due to  https://bitbucket.org/osrf/gzweb/issues/64/missing-image-assets#comment-23080035, but it is ok.
 
 5. Place the necessary 3D model files of lunar surface by running the following commands.
 
@@ -105,9 +104,12 @@ The directory `~/catkin_ws/` will be used as a source directory for this instruc
 
   $ cd %HOME_GZWEB%/http/client/
   $ mkdir assets         (create `assets` folder in case it doesn't exist)
-  $ ln -fs `rospack find tetris_description`/models/tetris/ .
-  $ cd %HOME_GZWEB%/http/client/assets     (`assets` folder may not exist. If so, create it)
+  $ cp -r `rospack find tetris_description`/models/tetris/ .
   $ ln -fs `rospack find tetris_gazebo`/models/apollo15_landing_site_1000x1000 .
+  $ cd %HOME_GZWEB%
+  $ ./coarse_meshes.sh  50 http/client/assets/tetris/
+
+  This is tricky, coarse_meshes.sh convert jpg to png, we do not want to change contents in apollo15_landing_site_1000x1000.
 
 6. Add a trick to show the earth in the sky.
 
