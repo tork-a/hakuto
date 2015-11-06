@@ -154,7 +154,7 @@ Run Gzweb, Gazebo on web server. You need to open multiple terminals and run the
 
  ::
 
-  terminal-1$ roslaunch tetris_launch demo.launch gui:=false
+  terminal-1$ roslaunch tetris_launch demo.launch gui:=false kbteleop:=false
   terminal-2$ DISPLAY=:0.0 ROS_MASTER_URI=http://%WEBSERVER_IPADDR%:13311 ROS_IP=%WEBSERVER_IPADDR% %HOME_GZWEB%/start_gzweb.sh &
 
   (Example)
