@@ -2,8 +2,8 @@
 Changelog for package tetris_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.4 (2015-11-06)
+------------------
 * [sys] all link is rended by texture, so material is not needed
 * [sys] mv texture location to materials/textures, see https://bitbucket.org/osrf/gazebo_models/commits/0bde1dbe0cc62cefbcdd4a5a760e4f2e2aeb8bb6
 * Contributors: Kei Okada

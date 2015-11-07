@@ -2,8 +2,8 @@
 Changelog for package tetris_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.4 (2015-11-06)
+------------------
 * [improved] Sun light is stronger on the Moon
 * [fix] Temporary workaround to Gzweb not showing model (`#45 <https://github.com/tork-a/hakuto/issues/45>`_)
 * Contributors: Kei Okada, Isaac I.Y. Saito

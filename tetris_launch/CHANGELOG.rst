@@ -2,8 +2,8 @@
 Changelog for package tetris_launch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.4 (2015-11-06)
+------------------
 * [improved] Sun light is stronger on the Moon
 * [fix] Workaround for teleop dying error ( `#23 <https://github.com/tork-a/hakuto/issues/23>`_)
 * [doc] Use rosdoc_lite. Add more Gzweb server-side usage
