@@ -21,6 +21,7 @@
   <run_depend>tetris_gazebo</run_depend>
 
   <export>
+    <rosdoc config="rosdoc.yaml"/> 
   </export>
 
 </package>
