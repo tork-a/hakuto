@@ -68,10 +68,10 @@
       </attenuation>
       <direction>-1.0 1.0 -1.0</direction>
     </light>
-    <gui>
-     <camera name="camera_world_main">
-       <pose>57 15 1 0 0.05 1.4</pose>
-     </camera>
-    </gui>
+    <!-- <gui> -->
+    <!--  <camera name="camera_world_main"> -->
+    <!--    <pose>57 15 1 0 0.05 1.4</pose> -->
+    <!--  </camera> -->
+    <!-- </gui> -->
   </world>
 </sdf>
