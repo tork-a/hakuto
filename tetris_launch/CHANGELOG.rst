@@ -2,6 +2,13 @@
 Changelog for package tetris_launch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* [improved] Sun light is stronger on the Moon
+* [fix] Workaround for teleop dying error ( `#23 <https://github.com/tork-a/hakuto/issues/23>`_)
+* [doc] Use rosdoc_lite. Add more Gzweb server-side usage
+* Contributors: Kei Okada, Isaac I.Y. Saito
+
 0.1.3 (2015-04-11)
 ------------------
 * (Doc) No fragment aura around the earth to fix `#40 <https://github.com/tork-a/hakuto/issues/40>`_

@@ -2,6 +2,16 @@
 Changelog for package hakuto
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* [improved] Sun light is stronger on the Moon
+* [fix] Temporary workaround to Gzweb not showing model (`#45 <https://github.com/tork-a/hakuto/issues/45>`_)
+* [fix] Workaround for teleop dying error ( `#23 <https://github.com/tork-a/hakuto/issues/23>`_)
+* [sys] all link is rended by texture, so material is not needed
+* [sys] mv texture location to materials/textures, see https://bitbucket.org/osrf/gazebo_models/commits/0bde1dbe0cc62cefbcdd4a5a760e4f2e2aeb8bb6
+* [doc] Use rosdoc_lite. Add more Gzweb server-side usage
+* Contributors: Kei Okada, Isaac I.Y. Saito
+
 0.1.3 (2015-04-11)
 ------------------
 * (Improve) Cosmetics; Robot spawned at more adventurous starting pose. Sun location to cast more realistic shadow.
