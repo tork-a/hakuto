@@ -86,10 +86,6 @@ Troubleshooting
 
 The Hakuto web simulation is administered by `TORK <http://opensource-robotics.tokyo.jp/>`_, but this is subject to change. For now (Mar, 2015) any issues and requests can be contacted on `the issue tracker on github <https://github.com/tork-a/hakuto/issues>`_.
 
-Contribution
-===============
-
-*1 Web server where the simulation runs on is run by courtesy of JSK lab as of Nov. 2015.
 
 .. |hakuto_gzweb_dark| image:: https://cloud.githubusercontent.com/assets/493276/10970279/ecbde300-8410-11e5-9034-c33354ce7357.png
 .. |hakuto_web_simulator_osx_ff| image:: ./img/gzweb-1.2_tetris_osx_ff.png.jpg
