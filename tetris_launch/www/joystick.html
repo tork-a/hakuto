@@ -38,13 +38,13 @@
       // Change the speed label.
       $('#speed-label').html('Speed: ' + ui.value + '%');
       // Scale the speed.
-      teleop.scale = (ui.value / 100.0);
+      teleop.scale = (ui.value / 50.0);
       }
       });
 
       // Set the initial speed .
       $('#speed-label').html('Speed: ' + ($('#speed-slider').slider('value')) + '%');
-      teleop.scale = ($('#speed-slider').slider('value') / 100.0);
+      teleop.scale = ($('#speed-slider').slider('value') / 50.0);
       }
     </script>
   </head>
