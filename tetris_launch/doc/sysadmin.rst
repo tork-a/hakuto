@@ -61,10 +61,16 @@ Web server requirement
 Hakuto package Installation
 --------------------------------
 
-Install via apt (RECOMMENDED)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Let's install a few of the simulator's main components: 
 
-Let's install a few of the simulator's main components: `ROS <http://ros.org/>`_ (robotics middleware), `Gazebo <http://gazebosim.org/>`_ (dynamics simulation engine), `gzweb <http://gazebosim.org/gzweb>`_ (Gazebo's web frontend).
+* `ROS <http://ros.org/>`_ (robotics middleware)
+* `Gazebo <http://gazebosim.org/>`_ (dynamics simulation engine)
+* (Optional) `gzweb <http://gazebosim.org/gzweb>`_ (Gazebo's web frontend)
+
+`gzweb` is needed only when you want WEB browser based operation interface, therefore it's documented as an individual section.
+
+ROS and Gazebo install via apt (RECOMMENDED)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Install ROS.
 
@@ -84,8 +90,11 @@ See `ROS wiki <http://wiki.ros.org/indigo/Installation/Ubuntu>`_ for the detail 
 
   Ubuntu$ sudo apt-get install ros-indigo-hakuto
 
-Install via source
-~~~~~~~~~~~~~~~~~~~~~~~~
+
+ROS and Gazebo install via source
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**If you've successfully done `Install via apt` section, you can skip this alternative.**
 
 The directory `~/catkin_ws/` will be used as a source directory for this instruction.
 
@@ -109,25 +118,7 @@ The directory `~/catkin_ws/` will be used as a source directory for this instruc
 
   $ catkin_make install && source install/setup.bash
 
-4. Now let's install web front-end of the simulator, `Gzweb`. Follow the `official installation steps <http://gazebosim.org/gzweb#gzweb_installation>`_. Go through until `Clone the repository and build` section (ie. Stop before `Running gzserver, gzweb server, and WebGL client` section). Select `./deploy.sh -m local -c`. and this may failed due to  https://bitbucket.org/osrf/gzweb/issues/64/missing-image-assets#comment-23080035, but it is ok.
-
-5. Place the necessary 3D model files of lunar surface by running the following commands.
-
-  `%HOME_GZWEB%` is where you intalled `Gzweb`.
-
-  ::
-
-  $ cd %HOME_GZWEB%/http/client/
-  $ mkdir assets         (create `assets` folder in case it doesn't exist)
-  $ cd assets
-  $ cp -r `rospack find tetris_description`/models/tetris/ .
-  $ ln -fs `rospack find tetris_gazebo`/models/apollo15_landing_site_1000x1000 .
-  $ cd %HOME_GZWEB%
-  $ ./coarse_meshes.sh  50 http/client/assets/tetris/
-
-  This is tricky, coarse_meshes.sh convert jpg to png, we do not want to change contents in apollo15_landing_site_1000x1000.
-
-6. Add a trick to show the earth in the sky.
+4. Add a trick to show the earth in the sky.
 
 By default, the moon appears in the sky (I know how strange you feel since we're simulating lunar surface). 
 
@@ -152,13 +143,36 @@ Also modify `SkyX_Moon.fragment` file in the same directory (see `this question 
 
   `.fragment` file seems to not work right with some comment-out formats; e.g. do not use `#` or it just didn't show the earth at all.
 
-7. Prepare joystick keypad (for tele-operation)
+5. Prepare joystick keypad (for tele-operation)
 
  Tele-operation is done by using `keyboardteleopjs <http://wiki.ros.org/keyboardteleopjs>`_ that accepts command input from the keyboard through web browser. Put a `joystick.html` file under the `docroot` of your web server. In this document we use `/var/www/` for `apache` in this document. ::
   
   $ cp `rospack find tetris_launch`/www/joystick.html /var/www/
 
  You might need to edit the file using your web server's IP address, and the name of `Twist` topic. Do that by following `the tutorial for keyboard teleop <http://wiki.ros.org/keyboardteleopjs/Tutorials/CreatingABasicTeleopWidgetWithSpeedControl>`_.
+
+gzweb install via source
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Now let's install web front-end of the simulator, `Gzweb`. 
+
+1. Follow the `official installation steps <http://gazebosim.org/gzweb#gzweb_installation>`_. Go through until `Clone the repository and build` section (ie. Stop before `Running gzserver, gzweb server, and WebGL client` section). Select `./deploy.sh -m local -c`. and this may fail due to `this comment <https://bitbucket.org/osrf/gzweb/issues/64/missing-image-assets#comment-23080035>`_ but it is ok.
+
+2. We need a small hack to realize lunar surface on gzweb. Place the necessary 3D model files of lunar surface by running the following commands.
+
+  `%HOME_GZWEB%` is where you intalled `Gzweb`.
+
+  ::
+
+  $ cd %HOME_GZWEB%/http/client/
+  $ mkdir assets         (create `assets` folder in case it doesn't exist)
+  $ cd assets
+  $ cp -r `rospack find tetris_description`/models/tetris/ .
+  $ ln -fs `rospack find tetris_gazebo`/models/apollo15_landing_site_1000x1000 .
+  $ cd %HOME_GZWEB%
+  $ ./coarse_meshes.sh  50 http/client/assets/tetris/
+
+  This is tricky (coarse_meshes.sh converting jpg to png), but idea is that we do not want to make change to the original `tetris_gazebo/models/apollo15_landing_site_1000x1000` folder. Hopefully in the future this hack won't be needed as gzweb develops.
 
 Run the web simulator server 
 --------------------------------
