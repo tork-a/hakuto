@@ -4,7 +4,7 @@ Hakuto installation and in-depth operation doc
 ROS package suite for the lunar rovers at `Hakuto project <http://lunar.xprize.org/teams/hakuto>`_, a `Google XPRIZE <http://lunar.xprize.org/teams/astrobotic>`_ competitor.
 
 .. contents:: Table of Contents
-   :depth: 2
+   :depth: 3
 .. sectnum::
 
 Overview
@@ -129,9 +129,9 @@ By default, the moon appears in the sky (I know how strange you feel since we're
   $ sudo cp SkyX_Moon.png SkyX_Moon.png.org
   $ sudo ln -sf earth_from_moon_20071113_kaguya_03l.png SkyX_Moon.png
 
-NOTE: Directory `/usr/share/gazebo-2.2/media/skyx/` may vary depending on the version of Gazebo, or also for Gzweb (at the time of writing this is not tested on `Gzweb` yet). In that case find `media/skyx` directory and apply the same change.
+NOTE: Directory `/usr/share/gazebo-2.2/media/skyx/` may vary depending on the version of Gazebo installed on your environment, or also for Gzweb (at the time of writing this is not tested on `Gzweb` yet). In that case find `media/skyx` directory and apply the same change.
 
-Also modify `SkyX_Moon.fragment` file in the same directory (see `this question <http://answers.gazebosim.org/questions/8401>`_ for the discussion if necessary).
+Also modify `SkyX_Moon.fragment` file in the same directory (see `this question <http://answers.gazebosim.org/questions/8401>`_ for the discussion if necessary) as:
 
 ::
 
@@ -154,15 +154,15 @@ Also modify `SkyX_Moon.fragment` file in the same directory (see `this question 
 gzweb install via source
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Now let's install web front-end of the simulator, `Gzweb`. 
+Now let's install web front-end of the simulator `Gzweb`, which is available only as source (as of Jan 2016). Also add a customization for hakuto package.
 
 1. Follow the `official installation steps <http://gazebosim.org/gzweb#gzweb_installation>`_. Go through until `Clone the repository and build` section (ie. Stop before `Running gzserver, gzweb server, and WebGL client` section). Select `./deploy.sh -m local -c`. and this may fail due to `this comment <https://bitbucket.org/osrf/gzweb/issues/64/missing-image-assets#comment-23080035>`_ but it is ok.
 
 2. We need a small hack to realize lunar surface on gzweb. Place the necessary 3D model files of lunar surface by running the following commands.
 
-  `%HOME_GZWEB%` is where you intalled `Gzweb`.
+`%HOME_GZWEB%` is where you intalled `Gzweb`.
 
-  ::
+::
 
   $ cd %HOME_GZWEB%/http/client/
   $ mkdir assets         (create `assets` folder in case it doesn't exist)
@@ -182,7 +182,7 @@ Run Gzweb, Gazebo on web server. You need to open multiple terminals and run the
 * Terminal-1: Run simulation engine, Hakuto simulation modules.
 * Terminal-2: Run web frontend for the simulation engine. 
 
- ::
+::
 
   terminal-1$ roslaunch tetris_launch demo.launch gui:=false kbteleop:=false
   terminal-2$ DISPLAY=:0.0 ROS_MASTER_URI=http://%WEBSERVER_IPADDR%:13311 ROS_IP=%WEBSERVER_IPADDR% %HOME_GZWEB%/start_gzweb.sh &
