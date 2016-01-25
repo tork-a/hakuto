@@ -7,8 +7,8 @@ With this ROS package, we can realize `lunar rovers at Hakuto <http://team-hakut
 
 Please see `installation and in-depth operation <./sysadmin.rst>`_ doc if you're:
 
- * system administrator responsible for install/maintainance work
- * developer 
+* system administrator responsible for install/maintainance work
+* developer 
 
 .. contents:: Table of Contents
    :depth: 2
@@ -19,24 +19,24 @@ Operating System and Web Browser tested
 
 The simulator has been seen working on the following environment:
 
- * Mac OSX 10.10
+* Mac OSX 10.10
 
-   * Google Chrome 40.0
-   * Firefox 35.0
- * Android 5.0.1
+  * Google Chrome 40.0
+  * Firefox 35.0
+* Android 5.0.1
 
-   * Google Chrome 40.0 
+  * Google Chrome 40.0 
 
- * Ubuntu Linux (12.04 and 14.04)
+* Ubuntu Linux (12.04 and 14.04)
 
-   * Google Chromium 37.0 
-   * Firefox 35.0
+  * Google Chromium 37.0 
+  * Firefox 35.0
 
 Under following circumstance the simulator limitedly works:
 
- * MS Windows 7 (64bit)
+* MS Windows 7 (64bit)
 
-   * IE11
+  * IE11
 
 Simulator Basic Usage
 ========================
