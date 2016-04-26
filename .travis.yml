@@ -39,6 +39,7 @@ script: # All commands must exit with code 0 on success. Anything else is consid
   - cd ~/ros/ws_$REPOSITORY_NAME
   - catkin_make -j4
   - catkin_make test
+  - catkin_make run_tests
   - catkin_make install
   - source install/setup.bash
   - roslaunch --nodes tetris_description rviz.launch
