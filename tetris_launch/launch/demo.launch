@@ -1,8 +1,14 @@
 <launch>
   <arg name="gui" default="true"/>
   <arg name="kbteleop" default="true"/>
+  <arg name="INITIAL_POSE_X" default="59" />
+  <arg name="INITIAL_POSE_Y" default="20" />
+  <arg name="INITIAL_POSE_Z" default="1" />
   <include file="$(find tetris_gazebo)/launch/tetris_world.launch" >
     <arg name="gui" value="$(arg gui)" />
+    <arg name="INITIAL_POSE_X" value="$(arg INITIAL_POSE_X)" />
+    <arg name="INITIAL_POSE_Y" value="$(arg INITIAL_POSE_Y)" />
+    <arg name="INITIAL_POSE_Z" value="$(arg INITIAL_POSE_Z)" />
   </include>
   <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
   <group if="$(arg kbteleop)">

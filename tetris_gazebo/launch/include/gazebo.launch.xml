@@ -6,6 +6,9 @@
   <arg name="headless" default="false"/>
   <arg name="debug" default="false"/>
   <arg name="world_name" default="worlds/empty.world"/>
+  <arg name="INITIAL_POSE_X" default="59" />
+  <arg name="INITIAL_POSE_Y" default="20" />
+  <arg name="INITIAL_POSE_Z" default="1" />
 
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -22,7 +25,7 @@
 
   <!-- push robot_description to factory and spawn robot in gazebo -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
-        args="-x 0 -y 0 -z 1.0 -unpause -urdf -model tetris -file /tmp/robot.gazebo.urdf" respawn="false" output="screen">
+        args="-x $(arg INITIAL_POSE_X) -y $(arg INITIAL_POSE_Y) -z $(arg INITIAL_POSE_Z) -unpause -urdf -model tetris -file /tmp/robot.gazebo.urdf" respawn="false" output="screen">
     <param name="dummy_to_generate_gazebo_urdf_file"
            command="rosrun xacro xacro.py -o /tmp/robot.gazebo.urdf $(arg model)" />
     <param name="dummy_to_convert_package_to_model"

@@ -1,8 +1,14 @@
 <launch>
   <arg name="gui" default="true"/>
+  <arg name="INITIAL_POSE_X" default="59" />
+  <arg name="INITIAL_POSE_Y" default="20" />
+  <arg name="INITIAL_POSE_Z" default="1" />
   <include file="$(find tetris_gazebo)/launch/include/gazebo.launch.xml" >
     <arg name="model" value="$(find tetris_description)/urdf/tetris.urdf.xacro"  />
     <arg name="world_name" default="$(find tetris_gazebo)/worlds/apollo15_landing_site.world"/>
     <arg name="gui" value="$(arg gui)" />
+    <arg name="INITIAL_POSE_X" value="$(arg INITIAL_POSE_X)" />
+    <arg name="INITIAL_POSE_Y" value="$(arg INITIAL_POSE_Y)" />
+    <arg name="INITIAL_POSE_Z" value="$(arg INITIAL_POSE_Z)" />
   </include>
 </launch>
