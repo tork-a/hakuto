@@ -2,6 +2,20 @@
 Changelog for package tetris_launch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add test to install
+* add rostest test/tetris.test
+* *.launch : add INITIAL_POSE\_{X,Y,Z} arguments
+* [doc] Some clarifications
+* [doc] Seperate gzweb installation
+* [doc] Minor formatting
+* doc/sysadmin.rst: add how to use supervisor tool, fix sysadmin tools
+* set default cmd_vel to 1.0
+* add rosbridge_websocket.launch to demo.launch
+* Update index.rst
+* Contributors: Isaac I.Y. Saito, Kei Okada
+
 0.1.4 (2015-11-06)
 ------------------
 * [improved] Sun light is stronger on the Moon

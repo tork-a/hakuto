@@ -2,6 +2,12 @@
 Changelog for package tetris_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* *.launch : add INITIAL_POSE\_{X,Y,Z} arguments
+* remove camera init pose, because gzweb did not handle that
+* Contributors: Kei Okada
+
 0.1.4 (2015-11-06)
 ------------------
 * [improved] Sun light is stronger on the Moon

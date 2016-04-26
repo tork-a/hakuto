@@ -2,6 +2,9 @@
 Changelog for package hakuto
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.1.4 (2015-11-06)
 ------------------
 * [improved] Sun light is stronger on the Moon
