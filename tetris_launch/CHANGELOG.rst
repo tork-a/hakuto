@@ -2,8 +2,8 @@
 Changelog for package tetris_launch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.7 (2016-04-27)
+------------------
 * set ROSLIB pport to 127.0.0.1:9090
 * Contributors: Kei Okada
 
