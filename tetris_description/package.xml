@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>tetris_description</name>
-  <version>0.1.5</version>
+  <version>0.1.6</version>
   <description>This package holds 3D models of the hakuto robots in COLLADA and URDF formats.</description>
 
   <maintainer email="dev@opensource-robotics.tokyo.jp">TORK</maintainer>
