@@ -2,6 +2,11 @@
 Changelog for package tetris_launch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* install www
+* Contributors: Kei Okada
+
 0.1.5 (2016-04-27)
 ------------------
 * add test to install
