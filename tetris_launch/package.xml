@@ -20,6 +20,8 @@
   <run_depend>teleop_twist_keyboard</run_depend>
   <run_depend>tetris_gazebo</run_depend>
 
+  <test_depend>rostest</test_depend>
+
   <export>
     <rosdoc config="rosdoc.yaml"/> 
   </export>
