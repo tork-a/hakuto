@@ -2,8 +2,8 @@
 Changelog for package tetris_launch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.8 (2016-04-27)
+------------------
 * forget to add rostest to test_depend
 * Contributors: Kei Okada
 
