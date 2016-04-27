@@ -2,6 +2,11 @@
 Changelog for package tetris_launch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* forget to add rostest to test_depend
+* Contributors: Kei Okada
+
 0.1.7 (2016-04-27)
 ------------------
 * set ROSLIB pport to 127.0.0.1:9090
